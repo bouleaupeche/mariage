@@ -16,11 +16,11 @@
             font-family: 'Georgia', serif;
             line-height: 1.6;
             color: #333;
-            background-color: #fefefe;
+            background-color: #faf8f3; /* Blanc cassé crème */
         }
 
         header {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), /* Plus opaque (0.55 au lieu de 0.4) */
                         url('images/fond-mariage.jpg');
             background-size: cover;
             background-position: center;
@@ -30,7 +30,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: white;
+            color: #faf8f3; /* Blanc cassé crème pour le texte */
             position: relative;
         }
 
@@ -43,9 +43,9 @@
         }
 
         .lang-btn {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: 2px solid white;
+            background: rgba(250, 248, 243, 0.2); /* Crème transparent */
+            color: #faf8f3; /* Blanc cassé crème */
+            border: 2px solid #faf8f3;
             padding: 8px 16px;
             cursor: pointer;
             border-radius: 3px;
@@ -54,11 +54,11 @@
         }
 
         .lang-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(250, 248, 243, 0.3);
         }
 
         .lang-btn.active {
-            background: white;
+            background: #faf8f3; /* Crème opaque */
             color: #333;
         }
 
@@ -66,20 +66,23 @@
             font-size: 4em;
             font-weight: 300;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5); /* Ombre plus prononcée */
+            color: #faf8f3; /* Blanc cassé crème */
         }
 
         .header-content .date {
             font-size: 1.8em;
             margin-top: 20px;
             letter-spacing: 3px;
+            color: #faf8f3; /* Blanc cassé crème */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(250, 248, 243, 0.97); /* Blanc cassé crème avec transparence */
             padding: 15px 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             z-index: 1000;
@@ -151,7 +154,7 @@
 
         .info-card {
             padding: 30px;
-            background: #f9f9f9;
+            background: #f5f3ee; /* Crème légèrement plus foncé */
             border-radius: 5px;
         }
 
@@ -164,7 +167,7 @@
         .form-container {
             max-width: 600px;
             margin: 50px auto;
-            background: #f9f9f9;
+            background: #f5f3ee; /* Crème légèrement plus foncé */
             padding: 40px;
             border-radius: 5px;
         }
@@ -188,6 +191,7 @@
             border-radius: 3px;
             font-family: inherit;
             font-size: 1em;
+            background-color: #ffffff;
         }
 
         textarea {
@@ -234,7 +238,7 @@
 
         footer {
             background: #333;
-            color: white;
+            color: #faf8f3; /* Blanc cassé crème */
             text-align: center;
             padding: 30px;
             margin-top: 80px;
@@ -262,7 +266,7 @@
             position: absolute;
             bottom: 30px;
             font-size: 2em;
-            color: white;
+            color: #faf8f3; /* Blanc cassé crème */
             animation: bounce 2s infinite;
         }
 
@@ -310,8 +314,10 @@
         </div>
         <div class="header-content">
             <h1>Camila & Pierre</h1>
-            <div class="date lang-content active" data-lang="fr">24 OCTOBRE 2026</div>
-            <div class="date lang-content" data-lang="es">24 DE OCTUBRE 2026</div>
+            <div class="date">
+                <p>24.10.2026</p>
+                <p>Palacio Sans Souci</p>
+            </div>
         </div>
         <div class="scroll-arrow">↓</div>
     </header>
@@ -338,9 +344,9 @@
         <div class="story-text">
             <p>Tout a commencé en janvier 2019, lors de notre échange universitaire à Richmond. Ce fut un véritable coup de foudre ! Quelques semaines plus tard, nous partions déjà ensemble à Washington DC pour fêter la Saint-Valentin.</p>
             
-            <p>Puis est arrivée l'épidémie du Covid, et nous avons vécu une longue période de relation à distance : Cami confinée en Argentine, Pierre en France. Malgré la distance, notre amour n'a fait que grandir.</p>
+            <p>Puis est arrivée l'épidémie du Covid, et nous avons vécu une longue période de relation à distance : Camila confinée en Argentine, Pierre en France. Malgré la distance, notre amour n'a fait que grandir.</p>
             
-            <p>Quand nous nous sommes enfin retrouvés à Buenos Aires, nous avons vécu ensemble chez la famille de Cami avant de poser nos valises à Paris en août 2022. Un an plus tard, nous avons emménagé dans le 17ème arrondissement de Paris, une nouvelle étape de notre vie à deux.</p>
+            <p>Quand nous nous sommes enfin retrouvés à Buenos Aires, nous avons vécu ensemble chez la famille de Camila avant de poser nos valises à Paris en août 2022. Un an plus tard, nous avons emménagé dans le 17ème arrondissement de Paris, une nouvelle étape de notre vie à deux.</p>
             
             <p>En octobre 2024, Pierre a franchi le pas et a demandé Camila en mariage au Château de Chenonceau, un moment magique et inoubliable.</p>
         </div>
@@ -353,9 +359,9 @@
         <div class="story-text">
             <p>Todo comenzó en enero de 2019, durante nuestro intercambio universitario en Richmond. ¡Fue un verdadero flechazo! Pocas semanas después, ya viajábamos juntos a Washington DC para celebrar San Valentín.</p>
             
-            <p>Luego llegó la pandemia de Covid, y vivimos un largo período de relación a distancia: Cami confinada en Argentina, Pierre en Francia. A pesar de la distancia, nuestro amor sólo creció.</p>
+            <p>Luego llegó la pandemia de Covid, y vivimos un largo período de relación a distancia: Camila confinada en Argentina, Pierre en Francia. A pesar de la distancia, nuestro amor sólo creció.</p>
             
-            <p>Cuando finalmente nos reencontramos en Buenos Aires, vivimos juntos en la casa de la familia de Cami antes de establecernos en París en agosto de 2022. Un año después, nos mudamos al distrito 17 de París, una nueva etapa en nuestra vida juntos.</p>
+            <p>Cuando finalmente nos reencontramos en Buenos Aires, vivimos juntos en la casa de la familia de Camila antes de establecernos en París en agosto de 2022. Un año después, nos mudamos al distrito 17 de París, una nueva etapa en nuestra vida juntos.</p>
             
             <p>En octubre de 2024, Pierre dio el gran paso y le pidió a Camila que se casara con él en el Castillo de Chenonceau, un momento mágico e inolvidable.</p>
         </div>
@@ -368,8 +374,8 @@
         <div class="info-grid">
             <div class="info-card">
                 <h3>💒 Cérémonie</h3>
-                <p><strong>14h00</strong></p>
-                <p>Capella Colegio Marín</p>
+                <p><strong>17h00</strong></p>
+                <p>Capilla Colegio Marín</p>
                 <p>San Isidro</p>
                 <p>Buenos Aires, Argentine</p>
             </div>
@@ -384,7 +390,6 @@
                 <h3>👗 Dress Code</h3>
                 <p><strong>Élégant</strong></p>
                 <p>Tenue de soirée souhaitée</p>
-                <p>Couleurs claires bienvenues</p>
             </div>
         </div>
     </section>
@@ -396,7 +401,7 @@
         <div class="info-grid">
             <div class="info-card">
                 <h3>💒 Ceremonia</h3>
-                <p><strong>14:00</strong></p>
+                <p><strong>17:00</strong></p>
                 <p>Capilla Colegio Marín</p>
                 <p>San Isidro</p>
                 <p>Buenos Aires, Argentina</p>
@@ -409,10 +414,9 @@
                 <p>Buenos Aires, Argentina</p>
             </div>
             <div class="info-card">
-                <h3>👗 Código de Vestimenta</h3>
+                <h3>👗 Dress Code</h3>
                 <p><strong>Elegante</strong></p>
                 <p>Se recomienda vestimenta de gala</p>
-                <p>Colores claros bienvenidos</p>
             </div>
         </div>
     </section>
@@ -422,7 +426,7 @@
         <h2>Confirmer votre présence</h2>
         <div class="divider"></div>
         <p style="margin-bottom: 30px; color: #666;">
-            Merci de confirmer votre présence avant le 1er mars 2026 via ce formulaire ou par Whatsapp au +33611270929
+            Merci de confirmer votre présence avant le 01.03.2026 via ce formulaire ou par Whatsapp au +33611270929
         </p>
         
         <div class="form-container">
@@ -485,21 +489,21 @@
 
     <!-- RSVP ESPAÑOL -->
     <section id="rsvp" class="lang-content" data-lang="es">
-        <h2>Confirmar asistencia</h2>
+        <h2>Confirmá tu asistencia</h2>
         <div class="divider"></div>
         <p style="margin-bottom: 30px; color: #666;">
-            Por favor confirmar asistencia antes del 1 de marzo de 2026 via este formulario o por Whatsapp al +5491169960669
+            Por favor confirmá tu asistencia antes del 01.03.2026 via este formulario o por Whatsapp al +5491169960669
         </p>
         
         <div class="form-container">
             <div class="success-message" id="successMessage-es">
-                ✓ ¡Gracias! Su respuesta ha sido registrada. ¡Esperamos celebrar con ustedes!
+                ✓ ¡Gracias! Tu respuesta ha sido registrada. ¡Esperamos celebrar juntos!
             </div>
             <div class="error-message" id="errorMessage-es">
-                ✗ Ha ocurrido un error. Por favor intente nuevamente o contáctenos directamente.
+                ✗ Ha ocurrido un error. Por favor intentá nuevamente o contactanos directamente.
             </div>
             
-            <form id="rsvpForm-es" action="https://formspree.io/f/VOTRE_ID_FORMSPREE" method="POST">
+            <form id="rsvpForm-es" action="https://formspree.io/f/xldoovpv" method="POST">
                 <input type="hidden" name="_language" value="es">
                 <input type="hidden" name="_subject" value="Nuevo RSVP - Boda Camila & Pierre">
                 
@@ -519,7 +523,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label>¿Asistirá? *</label>
+                    <label>¿Te sumás? *</label>
                     <div class="radio-group">
                         <label>
                             <input type="radio" name="presence" value="Sí" required>
