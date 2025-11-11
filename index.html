@@ -108,7 +108,7 @@
         }
 
         .nav-logo {
-            font-size: 1.3em;
+            font-size: 1.1em;
             font-weight: 300;
             color: #d4af7a;
             letter-spacing: 2px;
@@ -117,7 +117,8 @@
         nav ul {
             list-style: none;
             display: flex;
-            gap: 35px;
+            flex-direction: row;
+            gap: 30px;
             margin: 0;
         }
 
@@ -340,8 +341,40 @@
             background: #333;
             color: #faf8f3;
             text-align: center;
-            padding: 30px;
+            padding: 40px 30px;
             margin-top: 80px;
+        }
+
+        footer p {
+            margin-bottom: 25px;
+        }
+
+        .footer-contact {
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 1px solid #555;
+        }
+
+        .footer-contact h3 {
+            font-size: 1.1em;
+            font-weight: 300;
+            margin-bottom: 15px;
+            color: #d4af7a;
+        }
+
+        .footer-contact p {
+            margin: 8px 0;
+            font-size: 0.95em;
+        }
+
+        .footer-contact a {
+            color: #faf8f3;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-contact a:hover {
+            color: #d4af7a;
         }
 
         .success-message {
@@ -396,7 +429,7 @@
             }
 
             .nav-logo {
-                font-size: 1.1em;
+                font-size: 1em;
             }
             
             nav ul {
@@ -485,7 +518,7 @@
             
             <p>Cuando finalmente nos reencontramos en Buenos Aires, vivimos juntos en la casa de la familia de Camila antes de establecernos en París en agosto de 2022. Un año después, nos mudamos al distrito 17 de París, una nueva etapa en nuestra vida juntos.</p>
             
-            <p>En octubre de 2024, Pierre dio el gran paso y le pidió a Camila que se casara con él en el Castillo de Chenonceau, un momento mágico e inolvidable.</p>
+            <p>En octubre 2024, Pierre dio el gran paso y le pidió a Camila que se casara con él en el Castillo de Chenonceau, un momento mágico e inolvidable.</p>
         </div>
     </section>
 
@@ -802,11 +835,21 @@
     <!-- FOOTER FRANÇAIS -->
     <footer class="lang-content active" data-lang="fr">
         <p>&copy; 2026 Camila & Pierre - Nous avons hâte de célébrer avec vous !</p>
+        <div class="footer-contact">
+            <h3>Nous contacter</h3>
+            <p>Camila : <a href="tel:+5491169960669">+54 911 6996-0669</a></p>
+            <p>Pierre : <a href="tel:+33611270929">+33 6 11 27 09 29</a></p>
+        </div>
     </footer>
 
     <!-- FOOTER ESPAÑOL -->
     <footer class="lang-content" data-lang="es">
         <p>&copy; 2026 Camila & Pierre - ¡Esperamos celebrar con ustedes!</p>
+        <div class="footer-contact">
+            <h3>Contáctenos</h3>
+            <p>Camila : <a href="tel:+5491169960669">+54 911 6996-0669</a></p>
+            <p>Pierre : <a href="tel:+33611270929">+33 6 11 27 09 29</a></p>
+        </div>
     </footer>
 
     <script>
