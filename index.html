@@ -34,14 +34,14 @@
             position: relative;
         }
 
-        .language-switcher {
+        header .language-switcher {
             position: absolute;
             top: 20px;
             right: 20px;
             z-index: 1001;
         }
 
-        .lang-btn {
+        header .lang-btn {
             background: rgba(250, 248, 243, 0.2);
             color: #faf8f3;
             border: 2px solid #faf8f3;
@@ -52,13 +52,39 @@
             transition: all 0.3s;
         }
 
-        .lang-btn:hover {
+        header .lang-btn:hover {
             background: rgba(250, 248, 243, 0.3);
         }
 
-        .lang-btn.active {
+        header .lang-btn.active {
             background: #faf8f3;
             color: #333;
+        }
+
+        /* Boutons de langue spécifiques pour la navigation */
+        nav .language-switcher {
+            display: flex;
+            gap: 10px;
+            align-items: center;  /* Ajout */
+        }
+
+        nav .lang-btn {
+            background: rgba(212, 175, 122, 0.15);
+            color: #666;
+            border: 1px solid #d4af7a;
+            padding: 6px 14px;
+            font-size: 0.85em;
+        }
+
+        nav .lang-btn:hover {
+            background: rgba(212, 175, 122, 0.25);
+            color: #333;
+        }
+
+        nav .lang-btn.active {
+            background: #d4af7a;
+            color: white;
+            border-color: #d4af7a;
         }
 
         .header-content h1 {
@@ -96,13 +122,15 @@
             display: block;
         }
 
+
         .nav-container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 40px;
+            gap: 30px;
         }
 
         .nav-logo {
@@ -115,9 +143,16 @@
         nav ul {
             list-style: none;
             display: flex;
-            flex-direction: row;
-            gap: 30px;
+            flex-direction: row !important;
+            gap: 35px;  /* Changé de 25px à 35px */
             margin: 0;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul li {
+            display: inline-block;
         }
 
         nav a {
@@ -126,6 +161,8 @@
             font-size: 0.95em;
             transition: color 0.3s;
             position: relative;
+            padding: 0 8px;  /* Ajoute de l'espace autour de chaque lien */
+            white-space: nowrap;  /* Empêche le retour à la ligne */
         }
 
         nav a::after {
@@ -431,11 +468,15 @@
             }
             
             nav ul {
-                flex-wrap: wrap;
-                gap: 15px;
-                justify-content: center;
+                flex-direction: column !important;
+                align-items: center;
+                gap: 10px;
+                width: 100%;
             }
 
+            nav ul li {
+                display: block;
+            }
             nav a {
                 font-size: 0.85em;
             }
@@ -487,7 +528,7 @@
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#rsvp">RSVP</a></li>
             </ul>
-<div class="language-switcher">
+            <div class="language-switcher">
                 <button class="lang-btn active" onclick="switchLanguage('fr')" id="btn-fr">Français</button>
                 <button class="lang-btn" onclick="switchLanguage('es')" id="btn-es">Español</button>
             </div>
