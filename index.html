@@ -38,8 +38,6 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            display: flex;
-            gap: 10px;
             z-index: 1001;
         }
 
@@ -461,14 +459,14 @@
 <body>
     <header>
         <div class="language-switcher">
-            <button class="lang-btn active" onclick="switchLanguage('fr')">Français</button>
-            <button class="lang-btn" onclick="switchLanguage('es')">Español</button>
+            <button class="lang-btn lang-btn-header active>" onclick="switchLanguage('fr')" id="btn-header-fr">Français</button>
+            <button class="lang-btn lang-btn-header" onclick="switchLanguage('es')" id="btn-header-es">Español</button>
         </div>
         <div class="header-content">
             <h1>Camila & Pierre</h1>
             <div class="date">
                 <p>24.10.2026</p>
-                <p>Palacio Sans Souci</p>
+                <p>Palacio Sans Souci, Buenos Aires</p>
             </div>
         </div>
         <div class="scroll-arrow">↓</div>
@@ -489,6 +487,10 @@
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#rsvp">RSVP</a></li>
             </ul>
+<div class="language-switcher">
+                <button class="lang-btn active" onclick="switchLanguage('fr')" id="btn-fr">Français</button>
+                <button class="lang-btn" onclick="switchLanguage('es')" id="btn-es">Español</button>
+            </div>
         </div>
     </nav>
 
@@ -497,13 +499,13 @@
         <h2>Notre Histoire</h2>
         <div class="divider"></div>
         <div class="story-text">
-            <p>Tout a commencé en janvier 2019, lors de notre échange universitaire à Richmond. Ce fut un véritable coup de foudre ! Quelques semaines plus tard, nous partions déjà ensemble à Washington DC pour fêter la Saint-Valentin.</p>
+            <p>Tout a commencé en janvier 2019, lors de notre échange universitaire à Richmond. Ce fut un véritable coup de foudre !</p>
             
             <p>Puis est arrivée l'épidémie du Covid, et nous avons vécu une longue période de relation à distance : Camila confinée en Argentine, Pierre en France. Malgré la distance, notre amour n'a fait que grandir.</p>
             
-            <p>Quand nous nous sommes enfin retrouvés à Buenos Aires, nous avons vécu ensemble chez la famille de Camila avant de poser nos valises à Paris en août 2022. Un an plus tard, nous avons emménagé dans le 17ème arrondissement de Paris, une nouvelle étape de notre vie à deux.</p>
+            <p>Quand nous nous sommes enfin retrouvés à Buenos Aires, nous avons vécu ensemble chez la famille de Camila avant de poser nos valises à Paris en août 2022.</p>
             
-            <p>En octobre 2024, Pierre a franchi le pas et a demandé Camila en mariage au Château de Chenonceau, un moment magique et inoubliable.</p>
+            <p>En octobre 2024, Pierre a demandé Cami en mariage au Château de Chenonceau. Et le 30 août 2025, nous avons célébré notre mariage civil à Levallois.</p>
         </div>
     </section>
 
@@ -512,13 +514,13 @@
         <h2>Nuestra Historia</h2>
         <div class="divider"></div>
         <div class="story-text">
-            <p>Todo comenzó en enero de 2019, durante nuestro intercambio universitario en Richmond. ¡Fue un verdadero flechazo! Pocas semanas después, ya viajábamos juntos a Washington DC para celebrar San Valentín.</p>
+            <p>Todo comenzó en enero de 2019, durante nuestro intercambio universitario en Richmond. ¡Fue un verdadero flechazo!</p>
             
             <p>Luego llegó la pandemia de Covid, y vivimos un largo período de relación a distancia: Camila confinada en Argentina, Pierre en Francia. A pesar de la distancia, nuestro amor sólo creció.</p>
             
             <p>Cuando finalmente nos reencontramos en Buenos Aires, vivimos juntos en la casa de la familia de Camila antes de establecernos en París en agosto de 2022. Un año después, nos mudamos al distrito 17 de París, una nueva etapa en nuestra vida juntos.</p>
             
-            <p>En octubre 2024, Pierre dio el gran paso y le pidió a Camila que se casara con él en el Castillo de Chenonceau, un momento mágico e inolvidable.</p>
+            <p>En octubre de 2024, Pierre le pidió casamiento a Cami en el Castillo de Chenonceau. Y el 30 de agosto de 2025 celebramos nuestro casamiento civil en Levallois. </p>
         </div>
     </section>
 
@@ -528,7 +530,7 @@
         <div class="divider"></div>
         <div class="info-grid">
             <div class="info-card">
-                <h3>💒 Cérémonie</h3>
+                <h3>💒 Cérémonie Religieuse</h3>
                 <p><strong>17h00</strong></p>
                 <p>Capilla Colegio Marín</p>
                 <p>San Isidro</p>
@@ -550,7 +552,7 @@
         <div class="divider"></div>
         <div class="info-grid">
             <div class="info-card">
-                <h3>💒 Ceremonia</h3>
+                <h3>💒 Ceremonia Religiosa</h3>
                 <p><strong>17:00</strong></p>
                 <p>Capilla Colegio Marín</p>
                 <p>San Isidro</p>
@@ -577,7 +579,7 @@
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Nous souhaitons une tenue élégante de soirée pour célébrer cette journée ensoleillée avec nous ! Plus d'informations seront ajoutées dans les semaines à venir.</p>
+                    <p>Tenue élégante de soirée !</p>
                 </div>
             </div>
 
@@ -607,7 +609,7 @@
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Octobre marque le début du printemps à Buenos Aires. Les températures sont agréables, généralement entre 15°C et 23°C. Prévoyez des tenues légères pour la journée et une petite veste pour la soirée. Plus de recommandations vestimentaires seront ajoutées dans les semaines à venir.</p>
+                    <p>Octobre marque le début du printemps à Buenos Aires. Les températures sont agréables, généralement entre 15°C et 23°C.</p>
                 </div>
             </div>
 
@@ -617,7 +619,7 @@
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Votre présence est le plus beau des cadeaux ! Si vous souhaitez nous gâter, nous partagerons prochainement quelques suggestions. Les informations seront ajoutées dans les semaines à venir.</p>
+                    <p>Votre présence est le plus beau des cadeaux ! Si vous souhaitez nous gâter, nous partagerons prochainement un lien de cagnotte pour notre voyage de lune de miel.</p>
                 </div>
             </div>
 
@@ -627,7 +629,7 @@
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Nous organiserons des navettes entre les principaux hôtels et les lieux de célébration. Les détails pratiques et horaires seront communiqués dans les semaines à venir.</p>
+                    <p>Plus de détails pratiques vous seront communiqués dans les semaines à venir.</p>
                 </div>
             </div>
         </div>
@@ -644,7 +646,7 @@
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Deseamos una vestimenta elegante de gala para celebrar este día soleado con nosotros. Se agregará más información en las próximas semanas.</p>
+                    <p>Vestimenta elegante de gala.</p>
                 </div>
             </div>
 
@@ -674,7 +676,7 @@
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Octubre marca el inicio de la primavera en Buenos Aires. Las temperaturas son agradables, generalmente entre 15°C y 23°C. Prevean vestimenta ligera para el día y una chaqueta liviana para la noche. Se agregarán más recomendaciones en las próximas semanas.</p>
+                    <p>Octubre marca el inicio de la primavera en Buenos Aires. Las temperaturas son agradables, generalmente entre 15°C y 23°C.</p>
                 </div>
             </div>
 
@@ -684,7 +686,7 @@
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>¡Su presencia es el mejor regalo! Si desean mimarnos, próximamente compartiremos algunas sugerencias. La información se agregará en las próximas semanas.</p>
+                    <p>Tur presencia es el mejor regalo! Si queres mimarnos, compartiremos pronto más información para que puedas ayudarnos con nuestra luna de miel</p>
                 </div>
             </div>
 
@@ -694,7 +696,7 @@
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Organizaremos traslados entre los principales hoteles y los lugares de celebración. Los detalles prácticos y horarios se comunicarán en las próximas semanas.</p>
+                    <p>Los detalles prácticos se comunicarán en las próximas semanas.</p>
                 </div>
             </div>
         </div>
@@ -747,6 +749,12 @@
                             Non, malheureusement
                         </label>
                     </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="accompagnants-fr">Accompagnants</label>
+                    <textarea id="accompagnants-fr" name="accompagnants" 
+                              placeholder="Si vous remplissez ce formulaire au nom d'autres invités, merci de nous indiquer leurs noms complets."></textarea>
                 </div>
 
                 <div class="form-group">
@@ -816,15 +824,21 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="accompagnants-es">Accompañantes</label>
+                    <textarea id="accompagnants-es" name="accompagnants" 
+                              placeholder="Si estás completando este formulario en nombre de otros invitados, por favor indícanos sus nombres completos."></textarea>
+                </div>
+                
+                <div class="form-group">
                     <label for="allergies-es">Alergias o dietas especiales</label>
                     <textarea id="allergies-es" name="allergies" 
-                              placeholder="Por favor infórmenos sobre cualquier alergia o dieta especial"></textarea>
+                              placeholder="Por favor informanos sobre cualquier alergia o dieta especial"></textarea>
                 </div>
 
                 <div class="form-group">
                     <label for="message-es">Mensaje para los novios</label>
                     <textarea id="message-es" name="message" 
-                              placeholder="Déjenos un mensaje..."></textarea>
+                              placeholder="Dejanos un mensaje..."></textarea>
                 </div>
 
                 <button type="submit">Enviar respuesta</button>
@@ -853,7 +867,25 @@
     </footer>
 
     <script>
-        let currentLang = 'fr';
+        // Détection de la langue par défaut via URL
+        function getDefaultLanguage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const langParam = urlParams.get('lang');
+            
+            // Si ?lang=es dans l'URL, défaut espagnol
+            if (langParam === 'es') {
+                return 'es';
+            }
+            // Sinon défaut français
+            return 'fr';
+        }
+
+        let currentLang = getDefaultLanguage();
+
+        // Initialiser la langue au chargement de la page
+        document.addEventListener('DOMContentLoaded', function() {
+            switchLanguage(currentLang);
+        });
 
         function switchLanguage(lang) {
             currentLang = lang;
@@ -869,7 +901,18 @@
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
-            event.target.classList.add('active');
+            
+            // Activer les boutons dans le header
+            const headerBtn = document.getElementById(`btn-header-${lang}`);
+            if (headerBtn) {
+                headerBtn.classList.add('active');
+            }
+            
+            // Activer les boutons dans la navigation
+            const navBtn = document.getElementById(`btn-${lang}`);
+            if (navBtn) {
+                navBtn.classList.add('active');
+            }
             
             document.documentElement.lang = lang;
         }
