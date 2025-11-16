@@ -458,27 +458,46 @@
             }
 
             .nav-container {
-                flex-direction: column;
-                gap: 15px;
-                padding: 0 20px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 10px;
+                padding: 10px 20px;
+                align-items: center;
             }
 
             .nav-logo {
-                font-size: 1em;
+                font-size: 0.95em;
+                order: 1;
+                flex: 0 0 auto;
+            }
+
+            nav .language-switcher {
+                order: 2;
+                margin-left: auto;
+            }
+
+            nav .lang-btn {
+                padding: 5px 10px;
+                font-size: 0.75em;
             }
             
             nav ul {
                 flex-direction: column !important;
-                align-items: center;
-                gap: 10px;
+                align-items: flex-start;
+                gap: 8px;
                 width: 100%;
+                order: 3;
+                flex-basis: 100%;
+                margin-top: 10px;
             }
 
             nav ul li {
                 display: block;
             }
+
             nav a {
-                font-size: 0.85em;
+                font-size: 0.9em;
+                padding: 5px 0;
             }
 
             .language-switcher {
@@ -630,7 +649,7 @@
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Nous ajouterons prochainement une liste de recommandations d'hôtels à proximité des lieux de célébration. Des informations détaillées seront communiquées dans les semaines à venir.</p>
+                    <p>Nous ajouterons prochainement une liste de recommandations d'hôtels à proximité des lieux de célébration.</p>
                 </div>
             </div>
 
@@ -697,7 +716,7 @@
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Próximamente agregaremos una lista de hoteles recomendados cerca de los lugares de celebración. La información detallada se comunicará en las próximas semanas.</p>
+                    <p>Próximamente agregaremos una lista de hoteles recomendados cerca de los lugares de celebración.</p>
                 </div>
             </div>
 
