@@ -237,6 +237,58 @@
             margin-bottom: 15px;
         }
 
+        .photo-gallery {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            background: #f5f3ee;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .photo-gallery h3 {
+            color: #d4af7a;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .photo-gallery p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .gallery-btn {
+            display: inline-block;
+            background: #d4af7a;
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            margin: 10px;
+        }
+
+        .gallery-btn:hover {
+            background: #c9a86a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .gallery-btn.secondary {
+            background: transparent;
+            border: 2px solid #d4af7a;
+            color: #d4af7a;
+        }
+
+        .gallery-btn.secondary:hover {
+            background: rgba(212, 175, 122, 0.1);
+            transform: translateY(-2px);
+        }
+
         .faq-container {
             max-width: 800px;
             margin: 50px auto;
@@ -538,12 +590,14 @@
             <ul class="lang-content active" data-lang="fr">
                 <li><a href="#histoire">Notre Histoire</a></li>
                 <li><a href="#programme">Programme</a></li>
+                <li><a href="#souvenirs">Souvenirs</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#rsvp">RSVP</a></li>
             </ul>
             <ul class="lang-content" data-lang="es">
                 <li><a href="#histoire">Nuestra Historia</a></li>
                 <li><a href="#programme">Programa</a></li>
+                <li><a href="#souvenirs">Recuerdos</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#rsvp">RSVP</a></li>
             </ul>
@@ -628,6 +682,36 @@
         </div>
     </section>
 
+<!-- SOUVENIRS FRANÇAIS -->
+    <section id="souvenirs" class="lang-content active" data-lang="fr">
+        <h2>Nos Souvenirs</h2>
+        <div class="divider"></div>
+        <div class="photo-gallery">
+            <h3>📸 Mariage Civil - 30 août 2025</h3>
+            <p>Revivez les moments magiques de notre mariage civil à Levallois !</p>
+            <div>
+                <a href="https://pierre88.pixieset.com/mariagecivilcamilaandpierre/" target="_blank" class="gallery-btn">
+                    🖼️ Voir l'album
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECUERDOS ESPAÑOL -->
+    <section id="souvenirs" class="lang-content" data-lang="es">
+        <h2>Nuestros Recuerdos</h2>
+        <div class="divider"></div>
+        <div class="photo-gallery">
+            <h3>📸 Casamiento Civil - 30 de agosto 2025</h3>
+            <p>¡Revivan los momentos mágicos de nuestro casamiento civil en Levallois!</p>
+            <div>
+                <a href="https://pierre88.pixieset.com/mariagecivilcamilaandpierre/" target="_blank" class="gallery-btn">
+                    🖼️ Ver el álbum
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ FRANÇAIS -->
     <section id="faq" class="lang-content active" data-lang="fr">
         <h2>Questions Fréquentes</h2>
@@ -649,7 +733,12 @@
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Nous ajouterons prochainement une liste de recommandations d'hôtels à proximité des lieux de célébration.</p>
+                    <p>Nous vous recommandons de séjourner dans les quartiers de Palermo ou Recoleta, des zones sûres et bien situées à Buenos Aires (environ 40 minutes du lieu du mariage).</p>
+                    <p style="margin-top: 15px"><strong>Hôtel Dazzler Polo</strong> - Notre recommandation</p>
+                    <p>Situé à Palermo, quartier sûr proche des monuments et centres d'intérêt de Buenos Aires. À 40 minutes du lieu du mariage.</p>
+                    <p><strong>Tarif : 150 EUR/nuit</strong></p>
+                    <p>Pour vos réservations, vous pouvez contacter <strong>Francisco - agence Roalco</strong> : <a href="mailto:viajes@roalco.com.ar" style="color: #d4af7a;">viajes@roalco.com.ar</a></p>
+                    <p style="margin-top: 15px; font-size: 0.95em; color: #888;">D'autres recommandations seront ajoutées prochainement.</p>
                 </div>
             </div>
 
@@ -716,7 +805,12 @@
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Próximamente agregaremos una lista de hoteles recomendados cerca de los lugares de celebración.</p>
+                    <p>Recomendamos hospedarse en los barrios de Palermo o Recoleta, zonas seguras y bien ubicadas en Buenos Aires (aproximadamente 40 minutos del lugar del casamiento).</p>
+                    <p style="margin-top: 15px"><strong>Hotel Dazzler Polo</strong> - Nuestra recomendación</p>
+                    <p>Ubicado en Palermo, barrio seguro y cercano a los principales puntos de interés de Buenos Aires. A 40 minutos del lugar del casamiento.</p>
+                    <p><strong>Tarifa: 150 EUR / noche</strong></p>
+                    <p>Para las reservas, pueden contactar a <strong>Francisco - agencia Roalco</strong> : <a href="mailto:viajes@roalco.com.ar" style="color: #d4af7a;">viajes@roalco.com.ar</a></p>
+                    <p style="margin-top: 15px; font-size: 0.95em; color: #888;">Próximamente se agregarán más recomendaciones.</p>
                 </div>
             </div>
 
