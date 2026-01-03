@@ -736,9 +736,9 @@
                     <p>Nous vous recommandons de séjourner dans les quartiers de Palermo ou Recoleta, des zones sûres et bien situées à Buenos Aires.</p>
                     <p style="margin-top: 15px"><strong>Hôtel Dazzler Polo</strong> - Notre recommandation</p>
                     <p>Situé à Palermo, quartier sûr proche des monuments et centres d'intérêt de Buenos Aires. À 40 minutes du lieu du mariage.</p>
-                    <p><strong>Chambre Classic Queen Double Matrimonial : Tarif négocié à 150 USD/nuit</strong></p>
-                    <p>Pour vos réservations, vous pouvez contacter <strong>Francisco WEISZ - agence Roalco</strong> : <a href="mailto:viajes@roalco.com.ar" style="color: #d4af7a;">viajes@roalco.com.ar</a></p>
-                    <p>Mentionner dans l'objet de l'email "Wedding Fossey"</p>
+                    <p><strong>Tarif négocié : 150 USD/nuit</strong> pour une chambre Classic Queen Double Matrimonial</p>
+                    <p>Pour vos réservations, vous pouvez contacter <strong>Francisco WEISZ - agence Roalco</strong> : <a href="mailto:viajes@roalco.com.ar" style="color: #d4af7a;">viajes@roalco.com.ar</a>; avec l'adresse suivante en copie : <a href="mailto:emisiondepasajes@roalco.com.ar" style="color: #d4af7a;">emisiondepasajes@roalco.com.ar</a></p>
+                    <p>Veillez à mentionner dans l'objet de l'email <strong>"Wedding Fossey"</strong> pour bénéficier du tarif négocié</p>
                     <p style="margin-top: 15px; font-size: 0.95em; color: #888;">D'autres recommandations seront ajoutées prochainement.</p>
                 </div>
             </div>
@@ -806,11 +806,11 @@
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Recomendamos hospedarse en los barrios de Palermo o Recoleta, zonas seguras y bien ubicadas en Buenos Aires (aproximadamente 40 minutos del lugar del casamiento).</p>
+                    <p>Recomendamos hospedarse en los barrios de Palermo o Recoleta, zonas seguras y bien ubicadas en Buenos Aires.</p>
                     <p style="margin-top: 15px"><strong>Hotel Dazzler Polo</strong> - Nuestra recomendación</p>
                     <p>Ubicado en Palermo, barrio seguro y cercano a los principales puntos de interés de Buenos Aires. A 40 minutos del lugar del casamiento.</p>
-                    <p><strong>Tarifa: 150 EUR / noche</strong></p>
-                    <p>Para las reservas, pueden contactar a <strong>Francisco - agencia Roalco</strong> : <a href="mailto:viajes@roalco.com.ar" style="color: #d4af7a;">viajes@roalco.com.ar</a></p>
+                    <p><strong>Tarifa negociada: 150 EUR / noche</strong></p>
+                    <p>Para las reservas, pueden contactar a <strong>Francisco WEISZ - agencia Roalco</strong> : <a href="mailto:viajes@roalco.com.ar" style="color: #d4af7a;">viajes@roalco.com.ar</a>; con el email siguiente en copia : <a href="mailto:emisiondepasajes@roalco.com.ar" style="color: #d4af7a;">emisiondepasajes@roalco.com.ar</a></p>
                     <p style="margin-top: 15px; font-size: 0.95em; color: #888;">Próximamente se agregarán más recomendaciones.</p>
                 </div>
             </div>
@@ -1109,6 +1109,7 @@
         });
 
         // Gestion des formulaires RSVP
+// Gestion des formulaires RSVP
         ['fr', 'es'].forEach(lang => {
             const form = document.getElementById(`rsvpForm-${lang}`);
             const successMessage = document.getElementById(`successMessage-${lang}`);
@@ -1121,6 +1122,10 @@
                 submitButton.disabled = true;
                 submitButton.textContent = lang === 'fr' ? 'Envoi en cours...' : 'Enviando...';
                 
+                // Récupérer la réponse de présence
+                const presenceRadio = form.querySelector('input[name="presence"]:checked');
+                const isAttending = presenceRadio && (presenceRadio.value === 'Oui' || presenceRadio.value === 'Sí');
+                
                 try {
                     const formData = new FormData(form);
                     const response = await fetch(form.action, {
@@ -1132,6 +1137,21 @@
                     });
                     
                     if (response.ok) {
+                        // Adapter le message selon la réponse
+                        if (isAttending) {
+                            if (lang === 'fr') {
+                                successMessage.innerHTML = '✓ Merci ! Votre réponse a bien été enregistrée. Nous avons hâte de célébrer avec vous !';
+                            } else {
+                                successMessage.innerHTML = '✓ ¡Gracias! Tu respuesta ha sido registrada. ¡Esperamos celebrar juntos!';
+                            }
+                        } else {
+                            if (lang === 'fr') {
+                                successMessage.innerHTML = '✓ Merci d\'avoir pris le temps de nous répondre. Nous regrettons que vous ne puissiez pas être des nôtres. Vous nous manquerez !';
+                            } else {
+                                successMessage.innerHTML = '✓ ¡Gracias por tomarte el tiempo de responder! Lamentamos que no puedas estar con nosotros. ¡Te vamos a extrañar!';
+                            }
+                        }
+                        
                         successMessage.style.display = 'block';
                         errorMessage.style.display = 'none';
                         form.reset();
