@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camila &amp; Pierre — Bons plans Argentine</title>
+<meta name="description" content="Bons plans et infos pratiques pour votre voyage en Argentine — Mariage Camila & Pierre, 24 octobre 2026">
+<style>
+    :root {
+        --cream: #faf8f3;
+        --gold: #d4af7a;
+        --gold-dark: #c9a86a;
+        --card: #f5f3ee;
+        --ink: #333;
+        --muted: #666;
+        --line: #e8e3d8;
+        --alert: #c9772a;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+        font-family: 'Georgia', serif;
+        line-height: 1.6;
+        color: var(--ink);
+        background: var(--cream);
+    }
+
+    /* ---------- STRUCTURE SLIDES ---------- */
+    .deck {
+        height: 100vh;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+    }
+
+    .slide {
+        min-height: 100vh;
+        scroll-snap-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 90px 30px 100px;
+    }
+
+    .slide-inner {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .eyebrow {
+        font-size: 0.75em;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #b3a68d;
+        margin-bottom: 12px;
+        font-family: Arial, sans-serif;
+    }
+
+    h2 {
+        font-size: 2.6em;
+        color: var(--gold);
+        font-weight: 300;
+        margin-bottom: 10px;
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        color: #999;
+        font-style: italic;
+        margin-bottom: 25px;
+    }
+
+    .rule {
+        width: 90px;
+        height: 2px;
+        background: var(--gold);
+        margin: 20px 0 30px;
+    }
+
+    /* ---------- COUVERTURE ---------- */
+    .cover {
+        background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), #8a7a5f;
+        background-size: cover;
+        background-position: center;
+        color: var(--cream);
+        text-align: center;
+        align-items: center;
+    }
+
+    .cover h1 {
+        font-size: 4em;
+        font-weight: 300;
+        margin-bottom: 20px;
+        text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+    }
+
+    .cover p {
+        font-size: 1.25em;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        max-width: 620px;
+        margin: 0 auto;
+    }
+
+    .cover .rule { background: var(--cream); margin: 30px auto; }
+
+    .cover .hint {
+        margin-top: 55px;
+        font-size: 0.9em;
+        letter-spacing: 1px;
+        opacity: 0.75;
+    }
+
+    /* ---------- CARTES ---------- */
+    .grid { display: grid; gap: 20px; }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+    .card {
+        background: var(--card);
+        border-radius: 5px;
+        padding: 25px;
+    }
+
+    .card h3 {
+        color: var(--gold);
+        font-size: 1.25em;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+
+    .card p, .card li {
+        color: var(--muted);
+        line-height: 1.75;
+        font-size: 0.97em;
+    }
+
+    .card ul { margin-left: 18px; }
+    .card p + p { margin-top: 10px; }
+    strong { color: #555; }
+
+    /* ---------- PROGRAMME ---------- */
+    .timeline { border-left: 2px solid var(--line); padding-left: 25px; }
+
+    .event { position: relative; padding-bottom: 26px; }
+    .event:last-child { padding-bottom: 0; }
+
+    .event::before {
+        content: '';
+        position: absolute;
+        left: -32px;
+        top: 7px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--gold);
+        border: 3px solid var(--cream);
+    }
+
+    .event .when {
+        font-size: 0.78em;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #b3a68d;
+        font-family: Arial, sans-serif;
+    }
+
+    .event .what {
+        color: var(--gold);
+        font-size: 1.2em;
+        margin: 3px 0 6px;
+    }
+
+    .event p { color: var(--muted); font-size: 0.97em; }
+
+    .event.wedding .what { color: var(--ink); font-weight: bold; }
+    .event.wedding::before { background: var(--ink); }
+    .event.optional::before { background: var(--cream); border: 3px solid var(--gold); }
+
+    /* ---------- ALERTE ---------- */
+    .alert {
+        background: #f9f0e4;
+        border-left: 4px solid var(--alert);
+        border-radius: 5px;
+        padding: 30px;
+    }
+    .alert h3 { color: var(--alert); font-size: 1.3em; margin-bottom: 15px; }
+    .alert p, .alert li { color: var(--muted); line-height: 1.8; }
+    .alert p + p, .alert ul { margin-top: 12px; }
+    .alert ul { margin-left: 20px; }
+
+    /* ---------- RÉGIONS & HÔTELS ---------- */
+    .facts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        gap: 15px;
+        margin-bottom: 22px;
+    }
+
+    .fact {
+        background: var(--card);
+        padding: 15px 18px;
+        border-radius: 5px;
+    }
+    .fact .label {
+        display: block;
+        font-size: 0.7em;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #b3a68d;
+        margin-bottom: 4px;
+        font-family: Arial, sans-serif;
+    }
+    .fact .value { color: #555; font-size: 0.98em; }
+
+    .worth {
+        background: var(--card);
+        border-left: 3px solid var(--gold);
+        padding: 16px 20px;
+        border-radius: 3px;
+        color: var(--muted);
+        line-height: 1.75;
+        margin-bottom: 25px;
+        font-size: 0.97em;
+    }
+
+    .hotel {
+        background: var(--card);
+        border-radius: 5px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+    }
+
+    .hotel.reco {
+        border: 1px solid var(--gold);
+        background: #fdfbf6;
+    }
+
+    .reco-tag {
+        display: inline-block;
+        font-size: 0.65em;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        background: var(--gold);
+        color: #fff;
+        padding: 3px 10px;
+        border-radius: 20px;
+        margin-bottom: 8px;
+        font-family: Arial, sans-serif;
+    }
+
+    .hotel-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 6px;
+    }
+
+    .hotel-name { color: var(--gold); font-size: 1.1em; }
+    .hotel-price { color: #8a8271; font-size: 0.88em; white-space: nowrap; }
+    .hotel p { color: var(--muted); font-size: 0.94em; line-height: 1.65; }
+
+    .place {
+        font-size: 0.78em;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #b3a68d;
+        margin: 22px 0 10px;
+        font-family: Arial, sans-serif;
+    }
+
+    .badge {
+        display: inline-block;
+        font-size: 0.68em;
+        letter-spacing: 1px;
+        padding: 3px 9px;
+        border-radius: 20px;
+        margin-left: 6px;
+        vertical-align: middle;
+        font-family: Arial, sans-serif;
+    }
+    .b-eco { background: #e4ebe2; color: #5d7a56; }
+    .b-mid { background: #f0e7d5; color: #a8853f; }
+    .b-high { background: #e8e0ea; color: #7d6288; }
+    .b-spe { background: #e6e9ef; color: #5f7089; }
+
+    /* ---------- APPARTEMENTS ---------- */
+    .apt {
+        background: var(--card);
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 12px;
+    }
+    .apt h4 {
+        color: var(--gold);
+        font-size: 1.08em;
+        font-weight: 400;
+        margin-bottom: 3px;
+    }
+    .apt .addr {
+        color: #a89f8c;
+        font-size: 0.85em;
+        margin-bottom: 10px;
+    }
+    .apt-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+        padding: 8px 0;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.94em;
+    }
+    .apt-row a { color: var(--gold); text-decoration: none; border-bottom: 1px solid transparent; }
+    .apt-row a:hover { border-color: var(--gold); }
+    .apt-row .rate { color: #555; white-space: nowrap; }
+
+    /* ---------- DIVERS ---------- */
+    .btn {
+        display: inline-block;
+        background: var(--gold);
+        color: #fff;
+        padding: 14px 32px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: all 0.3s;
+        margin-top: 18px;
+    }
+    .btn:hover { background: var(--gold-dark); transform: translateY(-2px); }
+
+    .note {
+        margin-top: 22px;
+        padding: 16px 20px;
+        background: var(--card);
+        border-radius: 5px;
+        color: var(--muted);
+        font-size: 0.9em;
+        line-height: 1.75;
+    }
+    .note a { color: var(--gold); }
+
+    .soon {
+        border: 2px dashed var(--line);
+        border-radius: 5px;
+        padding: 45px;
+        text-align: center;
+        color: #999;
+    }
+    .soon h3 { color: #c4b48f; font-size: 1.5em; margin-bottom: 15px; font-weight: 400; }
+    .soon p { line-height: 1.8; }
+
+    /* ---------- NAVIGATION ---------- */
+    .progress {
+        position: fixed;
+        right: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 100;
+    }
+    .dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        border: 1px solid var(--gold);
+        background: transparent;
+        cursor: pointer;
+        padding: 0;
+        transition: all 0.3s;
+    }
+    .dot.active { background: var(--gold); transform: scale(1.35); }
+
+    .controls {
+        position: fixed;
+        bottom: 22px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: rgba(250,248,243,0.95);
+        border: 1px solid var(--line);
+        border-radius: 30px;
+        padding: 7px 14px;
+        z-index: 100;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    .controls button {
+        background: none;
+        border: none;
+        color: var(--gold);
+        font-size: 1.2em;
+        cursor: pointer;
+        padding: 3px 8px;
+        line-height: 1;
+        font-family: inherit;
+    }
+    .controls button:hover { color: var(--gold-dark); }
+    .counter {
+        color: #a89f8c;
+        font-size: 0.85em;
+        font-family: Arial, sans-serif;
+        min-width: 48px;
+        text-align: center;
+    }
+
+    .home-link {
+        position: fixed;
+        top: 20px;
+        left: 25px;
+        z-index: 100;
+        color: var(--gold);
+        background: rgba(250,248,243,0.9);
+        padding: 7px 14px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.85em;
+        border: 1px solid var(--line);
+    }
+    .home-link:hover { background: var(--card); }
+
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+    @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        * { transition: none !important; }
+    }
+
+    @media (max-width: 768px) {
+        .deck { scroll-snap-type: none; }
+        .slide { min-height: auto; padding: 55px 18px; }
+        .cover { min-height: 100vh; }
+        .cover h1 { font-size: 2.4em; }
+        .cover p { font-size: 1em; }
+        h2 { font-size: 1.9em; }
+        .progress { display: none; }
+        .hotel-head { flex-direction: column; gap: 2px; }
+        .apt-row { flex-direction: column; gap: 2px; }
+    }
+</style>
+</head>
+<body>
+
+<a href="index.html" class="home-link">← Le mariage</a>
+
+<div class="deck" id="deck">
+
+    <!-- 1 · COUVERTURE -->
+    <section class="slide cover">
+        <div class="slide-inner">
+            <h1>Bons plans Argentine</h1>
+            <div class="rule"></div>
+            <p>Le programme du week-end, nos conseils pratiques et nos adresses pour prolonger le voyage.</p>
+            <p class="hint">↓ Faites défiler</p>
+        </div>
+    </section>
+
+    <!-- 2 · PROGRAMME DU WEEK-END -->
+    <section class="slide">
+        <div class="slide-inner">
+            <p class="eyebrow">Du 23 au 26 octobre</p>
+            <h2>Le week-end du mariage</h2>
+            <p class="subtitle">Autour du grand jour, quelques rendez-vous pour se retrouver</p>
+            <div class="rule"></div>
+
+            <div class="timeline">
+                <div class="event">
+                    <span class="when">Vendredi 23 · 20 h 00</span>
+                    <div class="what">Dîner d'accueil des Français</div>
+                    <p>Au restaurant <strong>Tomate</strong>. L'occasion de se retrouver avant le grand jour.</p>
+                </div>
+
+                <div class="event wedding">
+                    <span class="when">Samedi 24 · le grand jour</span>
+                    <div class="what">💍 Le mariage</div>
+                    <p>Cérémonie à <strong>16 h 30</strong> à la <strong>Capilla Colegio Marín</strong> (San Isidro), puis fête dès <strong>18 h 00</strong> au <strong>Palacio Sans Souci</strong>, jusqu'à 2 h du matin.</p>
+                </div>
+
+                <div class="event">
+                    <span class="when">Dimanche 25 · 16 h 00</span>
+                    <div class="what">Goûter garden party</div>
+                    <p>À la pastelería <strong>Malvón</strong>. Un après-midi tranquille pour décompresser ensemble.</p>
+                </div>
+
+                <div class="event">
+                    <span class="when">Lundi 26 · 9 h 00 – 14 h 00</span>
+                    <div class="what">Visite guidée de Buenos Aires</div>
+                    <p>En bus, avec plusieurs arrêts et un <strong>guide francophone</strong>. La meilleure façon de découvrir la ville.</p>
+                </div>
+
+                <div class="event optional">
+                    <span class="when">Quand vous voulez · en option</span>
+                    <div class="what">Une soirée tango</div>
+                    <p>Nous n'avons rien organisé, mais celles et ceux que ça tente peuvent aller au dîner-spectacle d'<strong>El Viejo Almacén</strong>, à San Telmo. Réservation en ligne.</p>
+                </div>
+            </div>
+
+            <div class="note">
+                🚌 <strong>Navettes le jour du mariage :</strong> des navettes vous conduiront de l'hôtel Dazzler à la Capilla Colegio Marín, puis de la chapelle au Palacio Sans Souci, et enfin pour le retour à l'hôtel à 2 h.
+                <br><br>
+                📍 Les adresses précises des différents lieux vous seront communiquées ultérieurement.
+            </div>
+        </div>
+    </section>
+
+    <!-- 3 · ALERTE EZEIZA -->
+    <section class="slide">
+        <div class="slide-inner">
+            <p class="eyebrow">À vérifier dès maintenant</p>
+            <h2>Attention à votre vol retour</h2>
+            <div class="rule"></div>
+
+            <div class="alert">
+                <h3>⚠️ Travaux à l'aéroport d'Ezeiza, du 24 octobre au 11 novembre 2026</h3>
+                <p>La piste principale est raccourcie : les gros porteurs long-courriers ne peuvent pas décoller normalement. <strong>Air France, KLM, Lufthansa, British Airways</strong> et d'autres suspendent ou reprogramment leurs vols vers l'Europe (souvent via São Paulo ou Rio). D'autres les maintiennent avec une escale technique (Iberia via Montevideo, Aerolíneas Argentinas via Rio…).</p>
+                <p><strong>Vos arrivées ne sont pas concernées — c'est le retour qui l'est.</strong> Trois options :</p>
+                <ul>
+                    <li>Prévoir un retour <strong>après le 11 novembre</strong> — le plus simple, et vous gagnez quelques jours de voyage</li>
+                    <li>Accepter un vol <strong>avec correspondance</strong></li>
+                    <li>Choisir une compagnie qui maintient ses vols</li>
+                </ul>
+                <p><strong>Vérifiez votre réservation maintenant</strong>, pas en septembre. Bonne nouvelle : les <strong>vols intérieurs ne sont pas touchés</strong>. C'est même la période idéale pour voyager à l'intérieur du pays.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4 · INFOS PRATIQUES 1 -->
+    <section class="slide">
+        <div class="slide-inner">
+            <p class="eyebrow">Infos pratiques · 1 / 2</p>
+            <h2>Argent &amp; transports</h2>
+            <div class="rule"></div>
+
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>💱 Argent &amp; paiements</h3>
+                    <p>Depuis avril 2025, le contrôle des changes (« cepo ») a été levé et l'écart avec le marché parallèle s'est effondré. <strong>Payer par carte n'est plus pénalisant</strong>, contrairement à ce qu'on lisait encore récemment.</p>
+                    <ul>
+                        <li>Une <strong>carte sans frais à l'étranger</strong> (Revolut, N26…)</li>
+                        <li>Un peu d'espèces malgré tout : certains lieux n'ont pas de connexion</li>
+                        <li>Si vous apportez du liquide : <strong>euros ou dollars</strong>, à changer en ville plutôt qu'à l'aéroport</li>
+                        <li>Pourboire au restaurant : <strong>environ 10 %</strong></li>
+                    </ul>
+                    <p><strong>Bon plan :</strong> avec une <strong>carte étrangère</strong>, les visiteurs étrangers sont exonérés de la <strong>TVA de 21 %</strong> sur l'hébergement. Voyagez avec votre passeport.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🚕 Transports</h3>
+                    <p><strong>Dans Buenos Aires :</strong> <strong>Cabify et Uber</strong> sont les plus pratiques. Sinon, taxis officiels noirs et jaunes, métro (« Subte ») et bus avec la carte rechargeable <strong>SUBE</strong>, en vente en kiosque.</p>
+                    <p><strong>Entre les régions :</strong> vu les distances, l'<strong>avion</strong> est presque incontournable (Aerolíneas Argentinas, Flybondi, JetSmart). Réservez tôt pour les meilleurs tarifs.</p>
+                    <p><strong>Voiture :</strong> agréable à Salta/Jujuy et à Bariloche, mais <strong>inutile dans Buenos Aires</strong>. Permis international conseillé.</p>
+                    <p><strong>Les deux aéroports :</strong> Ezeiza (EZE) pour l'international, à 45 min du centre ; Aeroparque (AEP), en ville, pour les vols intérieurs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5 · INFOS PRATIQUES 2 -->
+    <section class="slide">
+        <div class="slide-inner">
+            <p class="eyebrow">Infos pratiques · 2 / 2</p>
+            <h2>Climat &amp; vie sur place</h2>
+            <div class="rule"></div>
+
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>🌡️ Climat &amp; quoi emporter</h3>
+                    <p>Fin octobre, c'est le <strong>printemps</strong> — mais le climat change du tout au tout selon les régions, et les <strong>écarts jour/nuit sont importants</strong>. Le maître-mot : <strong>superposez les couches</strong>.</p>
+                    <ul>
+                        <li><strong>Buenos Aires :</strong> doux, 15–23 °C</li>
+                        <li><strong>Salta &amp; Jujuy :</strong> journées chaudes et sèches, <strong>nuits froides</strong>, frais en altitude</li>
+                        <li><strong>Iguazú :</strong> chaud et humide — prévoir un imperméable</li>
+                        <li><strong>Patagonie :</strong> froid et <strong>très venteux</strong> — manteau et coupe-vent</li>
+                    </ul>
+                    <p>Dans la valise : crème solaire (le soleil tape fort en altitude), chaussures de marche, et de quoi se couvrir le soir partout.</p>
+                </div>
+
+                <div class="card">
+                    <h3>📱 Rester connecté</h3>
+                    <p>Le plus simple : une <strong>eSIM</strong> (Holafly, Airalo…), activée avant le départ. Le Wi-Fi est largement disponible dans les hôtels et les cafés.</p>
+
+                    <h3 style="margin-top: 24px;">🩹 Santé &amp; sécurité</h3>
+                    <p>Aucun vaccin obligatoire et <strong>eau du robinet potable</strong> à Buenos Aires. Comme dans toute grande ville, attention aux <strong>pickpockets</strong>. Le quartier de La Boca se visite <strong>de jour uniquement</strong>. Une <strong>assurance voyage</strong> est vivement conseillée.</p>
+
+                    <h3 style="margin-top: 24px;">🔌 Divers</h3>
+                    <p>Prises <strong>types C et I (220 V)</strong> : prévoyez un adaptateur. Décalage horaire : <strong>−4 h</strong> avec la France en octobre.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6 · ORIANE -->
+    <section class="slide">
+        <div class="slide-inner">
+            <p class="eyebrow">Se faire aider</p>
+            <h2>Organiser son voyage</h2>
+            <div class="rule"></div>
+
+            <div class="card" style="padding: 35px;">
+                <h3 style="font-size: 1.5em;">Oriane — agence locale (Evaneos)</h3>
+                <p style="margin-top: 15px;">Pour celles et ceux qui préfèrent ne pas tout organiser eux-mêmes, nous vous recommandons chaleureusement <strong>Oriane</strong>, l'agence locale qui a conçu les voyages de la famille de Pierre. Les hôtels des pages suivantes viennent d'ailleurs de ses itinéraires.</p>
+                <p>Basée à Buenos Aires, elle parle <strong>français</strong> et crée des voyages <strong>sur mesure</strong> : durée, étapes, hébergements et activités s'adaptent à votre budget, votre rythme et vos envies — des jeunes couples aux familles avec enfants.</p>
+                <p>Un bon réflexe : mentionnez que vous venez pour <strong>le mariage de Camila &amp; Pierre</strong>. Cela l'aidera à caler vos dates autour du 24 octobre.</p>
+                <a href="https://www.evaneos.fr/argentine/voyage/agences/69749-oriane/" target="_blank" rel="noopener" class="btn">Découvrir ses circuits</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7 · BUENOS AIRES -->
+    <section class="slide">
+        <div class="slide-inner">
+            <p class="eyebrow">Où dormir</p>
+            <h2>Buenos Aires</h2>
+            <p class="subtitle">Quartiers conseillés : Palermo ou Recoleta · 3 à 5 jours sur place</p>
+            <div class="rule"></div>
+
+            <div class="hotel reco">
+                <span class="reco-tag">Notre recommandation</span>
+                <div class="hotel-head">
+                    <span class="hotel-name">Dazzler by Wyndham Polo <span class="badge b-mid">€€</span></span>
+                    <span class="hotel-price">150 USD / nuit — tarif négocié</span>
+                </div>
+                <p>À Palermo, à 40 min du lieu du mariage. Réservation auprès de <strong>Francisco Weisz</strong> (agence Roalco), en indiquant « <strong>Wedding Fossey</strong> » en objet pour bénéficier du tarif — coordonnées dans la FAQ du site.</p>
+            </div>
+
+            <div class="place">L'alternative — appartements Top Rentals</div>
+
+            <div class="apt">
+                <p style="color: var(--muted); font-size: 0.94em; line-height: 1.7; margin-bottom: 14px;">
+                    Appartements meublés à <strong>Palermo</strong>, avec réception 24/7, ménage et laverie. Tarifs <strong>par appartement, pas par personne</strong> : en famille ou entre amis, c'est souvent plus économique — et la cuisine change tout sur un long séjour. Lit supplémentaire : 40 USD.
+                </p>
+                <div class="apt-row">
+                    <span><strong>Palermo Soho</strong> — Godoy Cruz 2573 · studio (2 p.) / 2 pièces (3 p.)
+                        <a href="https://my.matterport.com/show/?m=x1A2znhtkeQ" target="_blank" rel="noopener">3D</a> ·
+                        <a href="https://my.matterport.com/show/?m=dwj1maoeiFw" target="_blank" rel="noopener">3D</a></span>
+                    <span class="rate">125 / 150 USD</span>
+                </div>
+                <div class="apt-row">
+                    <span><strong>Palermo Chico</strong> — Cabello 3620 · 2 pièces (3 p.) / 3 pièces (5 p.)
+                        <a href="https://my.matterport.com/show/?m=u6n5zX9mwoS" target="_blank" rel="noopener">3D</a> ·
+                        <a href="https://my.matterport.com/show/?m=C9nLXHiA8GE" target="_blank" rel="noopener">3D</a></span>
+                    <span class="rate">145 / 215 USD</span>
+                </div>
+                <div class="apt-row">
+                    <span><strong>Palermo Hollywood</strong> — Gorriti 6066 · 2 pièces (3 p.) / 3 pièces (5 p.)
+                        <a href="https://my.matterport.com/show/?m=3utFbDWgM9q" target="_blank" rel="noopener">3D</a> ·
+                        <a href="https://my.matterport.com/show/?m=LaDoMbJKvQm" target="_blank" rel="noopener">3D</a></span>
+                    <span class="rate">145 / 235 USD</span>
+                </div>
+                <div class="apt-row" style="border-top: 1px solid var(--line); color: #a89f8c; font-size: 0.88em;">
+                    <span>Réservation auprès du même contact : <a href="mailto:viajes@roalco.com.ar">viajes@roalco.com.ar</a></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8 · LES RÉGIONS -->
+    <section class="slide">
+        <div class="slide-inner">
+            <p class="eyebrow">Après le mariage</p>
+            <h2>Prolonger le voyage</h2>
+            <p class="subtitle">Trois directions, selon le temps dont vous disposez</p>
+            <div class="rule"></div>
+
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3>Nord-Ouest</h3>
+                    <p><strong>Salta &amp; Jujuy</strong></p>
+                    <p>Montagnes colorées, déserts de sel, villages coloniaux et vignobles.</p>
+                    <p style="margin-top: 12px; color: #a89f8c;">≈ 2 h de vol · 5 à 7 jours</p>
+                </div>
+                <div class="card">
+                    <h3>Nord-Est</h3>
+                    <p><strong>Iguazú</strong></p>
+                    <p>Les chutes : l'une des plus grandes merveilles naturelles du monde.</p>
+                    <p style="margin-top: 12px; color: #a89f8c;">≈ 1 h 45 de vol · 2 à 3 jours</p>
+                </div>
+                <div class="card">
+                    <h3>Sud</h3>
+                    <p><strong>Patagonie</strong></p>
+                    <p>Glaciers, lacs et grands espaces, jusqu'au bout du monde.</p>
+                    <p style="margin-top: 12px; color: #a89f8c;">2 h 20 à 3 h 15 de vol · 4 à 6 jours</p>
+                </div>
+            </div>
+
+            <div class="note">
+                <strong>Les budgets des pages suivantes :</strong>
+                <span class="badge b-eco">€ ÉCONOMIQUE</span> 50–110 €&nbsp;&nbsp;
+                <span class="badge b-mid">€€ CONFORT</span> 110–190 €&nbsp;&nbsp;
+                <span class="badge b-high">€€€ HAUT DE GAMME</span> 190 € et +
+                <br>Prix indicatifs par nuit, en chambre double — ils varient selon les dates. Toutes ces adresses ont été testées par notre famille et nos amis.
+            </div>
+        </div>
+    </section>
+
+    <!-- 9 · SALTA -->
+    <section class="slide">
+        <div class="slide-inner">
+            <p class="eyebrow">Nord-Ouest · ≈ 2 h de vol</p>
+            <h2>Salta</h2>
+            <div class="rule"></div>
+
+            <div class="worth">
+                <strong>Ça vaut le coup si…</strong> vous aimez les grands paysages et la culture andine : le Cerro de los Siete Colores, les Salinas Grandes, la Quebrada de Humahuaca, la route 40 et les vins de Cafayate. Attention à l'altitude et aux nuits froides.
+            </div>
+
+            <div class="hotel reco">
+                <span class="reco-tag">Notre recommandation</span>
+                <div class="hotel-head">
+                    <span class="hotel-name">Legado Mítico <span class="badge b-high">€€€</span></span>
+                    <span class="hotel-price">~150–230 € / nuit</span>
+                </div>
+                <p>Maison des années 1930 en plein centre historique, chambres au nom de figures argentines. Élégant et très intimiste — l'hôtel n'accueille pas d'enfants.</p>
+            </div>
+
+            <div class="hotel">
+                <div class="hotel-head">
+                    <span class="hotel-name">Inkai <span class="badge b-eco">€</span></span>
+                    <span class="hotel-price">~50–90 € / nuit</span>
+                </div>
+                <p>3★ central, près du Paseo Balcarce. Simple, bien situé, excellent rapport qualité-prix.</p>
+            </div>
+
+            <div class="hotel">
+                <div class="hotel-head">
+                    <span class="hotel-name">Villa Vicuña <span class="badge b-mid">€€</span></span>
+                    <span class="hotel-price">~90–140 € / nuit</span>
+                </div>
+                <p>Boutique-hôtel dans une demeure coloniale du centre historique. Patio, piscine, une douzaine de chambres.</p>
+            </div>
+
+            <div class="hotel">
+                <div class="hotel-head">
+                    <span class="hotel-name">Finca Valentina <span class="badge b-high">€€€</span></span>
+                    <span class="hotel-price">~170–220 € / nuit</span>
+                </div>
+                <p>Maison de campagne au milieu des vignes, à 20 min de la ville. Piscine, table d'hôte, grand calme.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10 · PURMAMARCA & CACHI -->
+    <section class="slide">
+        <div class="slide-inner">
+            <p class="eyebrow">Nord-Ouest</p>
+            <h2>Purmamarca &amp; Cachi</h2>
+            <p class="subtitle">Les étapes vers la Quebrada de Humahuaca et les vallées Calchaquíes</p>
+            <div class="rule"></div>
+
+            <div class="place">Purmamarca · Jujuy</div>
+
+            <div class="hotel">
+                <div class="hotel-head">
+                    <span class="hotel-name">Colores de Purmamarca <span class="badge b-mid">€€</span></span>
+                    <span class="hotel-price">~120–180 € / nuit</span>
+                </div>
+                <p>Dix maisons avec cuisine équipée, face au Cerro de los Siete Colores. Piscine et vélos. Pratique en famille.</p>
+            </div>
+
+            <div class="hotel">
+                <div class="hotel-head">
+                    <span class="hotel-name">Manantial del Silencio <span class="badge b-high">€€€</span></span>
+                    <span class="hotel-price">~180–270 € / nuit</span>
+                </div>
+                <p>La plus belle adresse du village : spa, restaurant gastronomique et vue sur la Quebrada.</p>
+            </div>
+
+            <div class="place">Cachi</div>
+
+            <div class="hotel">
+                <div class="hotel-head">
+                    <span class="hotel-name">El Cortijo <span class="badge b-mid">€€</span></span>
+                    <span class="hotel-price">~120–175 € / nuit</span>
+                </div>
+                <p>Ancienne maison coloniale en pierre et adobe, joliment décorée, au cœur du village. Le restaurant est une adresse en soi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11 · CAFAYATE -->
+    <section class="slide">
+        <div class="slide-inner">
+            <p class="eyebrow">Nord-Ouest</p>
+            <h2>Cafayate</h2>
+            <p class="subtitle">Le pays du Torrontés, au bout des vallées Calchaquíes</p>
+            <div class="rule"></div>
+
+            <div class="hotel reco">
+                <span class="reco-tag">Notre recommandation</span>
+                <div class="hotel-head">
+                    <span class="hotel-name">Patios de Cafayate <span class="badge b-high">€€€</span></span>
+                    <span class="hotel-price">~130–190 € / nuit</span>
+                </div>
+                <p>Hôtel de vignoble dans une finca de 1892, sur le domaine de la <strong>Bodega El Esteco</strong> : cave, dégustations et restaurant sur place. Une expérience à part entière, plus qu'un simple hébergement.</p>
+            </div>
+
+            <div class="hotel">
+                <div class="hotel-head">
+                    <span class="hotel-name">Villa Vicuña Cafayate <span class="badge b-mid">€€</span></span>
+                    <span class="hotel-price">~90–150 € / nuit</span>
+                </div>
+                <p>La petite sœur de l'adresse de Salta, au cœur du village.</p>
+            </div>
+
+            <div class="hotel">
+                <div class="hotel-head">
+                    <span class="hotel-name">Iraola Boutique <span class="badge b-mid">€€</span></span>
+                    <span class="hotel-price">~120–180 € / nuit</span>
+                </div>
+                <p>14 chambres dans l'esprit d'une élégante estancia coloniale, avec piscine.</p>
+            </div>
+
+            <div class="hotel">
+                <div class="hotel-head">
+                    <span class="hotel-name">Santa Elena <span class="badge b-spe">EXPÉRIENCE ESTANCIA</span></span>
+                    <span class="hotel-price">tarif sur demande</span>
+                </div>
+                <p>Une ferme plutôt qu'un hôtel : fromagerie de chèvre, balade à cheval, asado avec les gauchos. Pour une vraie immersion.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12 · IGUAZÚ -->
+    <section class="slide">
+        <div class="slide-inner">
+            <p class="eyebrow">Nord-Est · ≈ 1 h 45 de vol</p>
+            <h2>Iguazú</h2>
+            <div class="rule"></div>
+
+            <div class="facts">
+                <div class="fact">
+                    <span class="label">Combien de jours</span>
+                    <span class="value">2 à 3 jours</span>
+                </div>
+                <div class="fact">
+                    <span class="label">Bon à savoir</span>
+                    <span class="value">Passeport pour le côté brésilien</span>
+                </div>
+                <div class="fact">
+                    <span class="label">Climat</span>
+                    <span class="value">Chaud et humide</span>
+                </div>
+            </div>
+
+            <div class="worth">
+                <strong>Ça vaut le coup si…</strong> vous ne faites qu'une seule extension : c'est la plus spectaculaire, la plus courte et la plus facile — parfaite avec des enfants ou pour un rythme tranquille. Prévoyez le <strong>côté argentin</strong> (les passerelles et la Gorge du Diable) <em>et</em> le <strong>côté brésilien</strong> (le panorama d'ensemble).
+            </div>
+
+            <div class="place">Puerto Iguazú</div>
+
+            <div class="hotel">
+                <div class="hotel-head">
+                    <span class="hotel-name">La Reserva Virgin Lodge <span class="badge b-mid">€€</span></span>
+                    <span class="hotel-price">~80–130 € / nuit</span>
+                </div>
+                <p>Lodge 4★ au cœur de la jungle d'Iryapú, à 15 min des chutes. Piscine et balcons sur la forêt.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13 · PATAGONIE -->
+    <section class="slide">
+        <div class="slide-inner">
+            <p class="eyebrow">Sud · 2 h 20 à 3 h 15 de vol</p>
+            <h2>Patagonie</h2>
+            <div class="rule"></div>
+
+            <div class="worth">
+                <strong>Ça vaut le coup si…</strong> vous rêvez du glacier <strong>Perito Moreno</strong> et des paysages de bout du monde : c'est <strong>El Calafate</strong> (avec El Chaltén pour les marcheurs). <strong>Bariloche</strong> est l'option plus douce — lacs, forêts et montagnes, avec un climat plus clément qu'à l'extrême sud : un bon choix en famille ou pour un rythme posé. Dans les deux cas, <strong>il fera froid et venteux</strong>.
+            </div>
+
+            <div class="place">Bariloche</div>
+
+            <div class="hotel">
+                <div class="hotel-head">
+                    <span class="hotel-name">Cacique Inacayal Lake &amp; Spa <span class="badge b-mid">€€</span></span>
+                    <span class="hotel-price">~110–180 € / nuit</span>
+                </div>
+                <p>4★ au bord du lac Nahuel Huapi, à quelques rues du Centro Cívico. Spa, piscine couverte et accès privé à la plage.</p>
+            </div>
+
+            <div class="place">El Calafate</div>
+
+            <div class="hotel">
+                <div class="hotel-head">
+                    <span class="hotel-name">Tierra Tehuelche <span class="badge b-eco">€</span></span>
+                    <span class="hotel-price">~55–110 € / nuit</span>
+                </div>
+                <p>Hostería avec vue sur le lac Argentino, et des <strong>appartements</strong> — pratique en famille ou pour plusieurs nuits.</p>
+            </div>
+
+            <div class="hotel">
+                <div class="hotel-head">
+                    <span class="hotel-name">Esplendor by Wyndham <span class="badge b-high">€€€</span></span>
+                    <span class="hotel-price">~150–220 € / nuit</span>
+                </div>
+                <p>4★ design en centre-ville, grandes baies vitrées sur le lac et la montagne. Spa et piscine chauffée.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14 · PROCHAINEMENT -->
+    <section class="slide">
+        <div class="slide-inner">
+            <div class="soon">
+                <h3>Prochainement</h3>
+                <p>Nos adresses de <strong>restaurants</strong>, les <strong>sites à ne pas manquer</strong> dans chaque région, et des <strong>exemples de circuits</strong> — dont un sur 20 jours, avec arrivée le 18 octobre.</p>
+                <p style="margin-top: 30px;">À très vite en Argentine !<br>
+                    <span style="color: var(--gold); font-size: 1.3em;">Camila &amp; Pierre</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<nav class="progress" id="dots" aria-label="Navigation entre les pages"></nav>
+
+<div class="controls">
+    <button id="prev" aria-label="Page précédente">←</button>
+    <span class="counter" id="counter">1 / 14</span>
+    <button id="next" aria-label="Page suivante">→</button>
+</div>
+
+<script>
+    const deck = document.getElementById('deck');
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const dotsBox = document.getElementById('dots');
+    const counter = document.getElementById('counter');
+    let current = 0;
+
+    slides.forEach((_, i) => {
+        const d = document.createElement('button');
+        d.className = 'dot' + (i === 0 ? ' active' : '');
+        d.type = 'button';
+        d.setAttribute('aria-label', 'Aller à la page ' + (i + 1));
+        d.addEventListener('click', () => goTo(i));
+        dotsBox.appendChild(d);
+    });
+    const dots = Array.from(dotsBox.children);
+
+    function goTo(i) {
+        const target = Math.max(0, Math.min(slides.length - 1, i));
+        slides[target].scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function setActive(i) {
+        current = i;
+        dots.forEach((d, j) => d.classList.toggle('active', j === i));
+        counter.textContent = (i + 1) + ' / ' + slides.length;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) setActive(slides.indexOf(e.target));
+        });
+    }, { root: deck, threshold: 0.5 });
+
+    slides.forEach(s => observer.observe(s));
+
+    document.getElementById('prev').addEventListener('click', () => goTo(current - 1));
+    document.getElementById('next').addEventListener('click', () => goTo(current + 1));
+
+    document.addEventListener('keydown', (e) => {
+        if (['ArrowDown', 'ArrowRight', 'PageDown'].includes(e.key)) { e.preventDefault(); goTo(current + 1); }
+        if (['ArrowUp', 'ArrowLeft', 'PageUp'].includes(e.key)) { e.preventDefault(); goTo(current - 1); }
+    });
+</script>
+</body>
+</html>
